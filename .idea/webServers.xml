@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="043f7d76-856c-42ea-9e34-c7f6653121d7" name="peterkim_innostock@104.199.173.98" url="http://104.199.173.98">
+        <fileTransfer host="104.199.173.98" port="22" privateKey="C:\Tools\PuTTys\secure-keys\peterkim_innostock@gmail.com.ppk" rootFolder="/home/peterkim_innostock" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
