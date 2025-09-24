@@ -1,40 +1,48 @@
 # Innostock
 
-These source codes are used to test each of the neural net models before designing the app.
+This repository contains source code for testing and validating neural network models before designing the production application.
 
-## Web crawler
+---
 
-KRX and DART are the great sources for Korean stock market data, hence the scraper bringing their daily trading data should be running in front of the analyzer. 
+## 📊 Web Crawler
+
+For the Korean stock market, the **Korea Exchange (KRX)** and **DART (Data Analysis, Retrieval and Transfer System)** are the most reliable sources of market and corporate data.  
+The crawler is responsible for continuously fetching and preprocessing daily datasets, which serve as inputs for model training and analysis.
 
 ### References
-- Korea Exchange http://www.krx.co.kr 
-- Data Analysis, Retrieval and Transfer System https://dart.fss.or.kr
+- [Korea Exchange (KRX)](http://www.krx.co.kr)  
+- [DART (FSS)](https://dart.fss.or.kr)
 
-### Extracting data (What is the data should be prepared?)
+### Data Requirements
+The following historical and derived data points are required:
 
-1. Past 10 Years daily transding history
-2. Open, Bid, Ask, Close price
-3. Share Volume
-4. 50, 30, 20 Day Avg. Daily Volume
-5. P/E Ratio
-7. Forward P/E (1y)
-8. Earnings Per Share (EPS)
+1. 10 years of daily trading history  
+2. Open, Bid, Ask, and Close prices  
+3. Daily trading volume  
+4. 50-, 30-, and 20-day average daily volumes  
+5. Price-to-Earnings (P/E) ratio  
+6. Forward P/E (1 year)  
+7. Earnings Per Share (EPS)  
 
-Most of the simple data, e.g., Open, Bid, Ask, Close price are easy to extract, but some can not. For instance, classifying meaning of the stock price fluctuation as positive or negative and finding a mean value point for the high differences of the stock price or its volume should be created out of nothing.
+> ⚠️ While basic trading data (prices, volumes) are straightforward to extract, advanced features require additional engineering. Examples include classifying price movements as positive/negative or deriving normalized mean-value indicators during high volatility.
 
-## Neural net models
+---
 
-I tried to find out which model can effectively predict the next day's stock price, that's why each of the models was tested one by one. Here is what I did.
+## 🤖 Neural Network Models
 
-- CNN
-- RNN (LSTM / GRU)
-- NLP
-- RL (Actor Critic, A2C, A3C)
+The objective is to determine which architecture best predicts the next day’s stock price. Each model was tested independently:
 
-### Tools
+- **CNN** (Convolutional Neural Networks)  
+- **RNN** (including LSTM and GRU)  
+- **NLP-based models** (for sentiment and corporate filings analysis)  
+- **RL** (Reinforcement Learning: Actor-Critic, A2C, A3C)  
 
-- Python
-- Tensorflow
-- Keras
-- MariaDB
-- R
+---
+
+## 🛠 Tools & Technologies
+
+- **Languages/Frameworks**: Python, R  
+- **Libraries**: TensorFlow, Keras  
+- **Database**: MariaDB  
+
+---
